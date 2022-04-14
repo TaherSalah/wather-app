@@ -34,7 +34,7 @@
                                         font-weight: 500;
                                     }
                                     
-                                    .iconLeft {
+                                    .btnBack .iconLeft {
                                         cursor: pointer;
                                         font-size: 20px;
                                         margin-right: 10px;

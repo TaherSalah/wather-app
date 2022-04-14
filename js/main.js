@@ -2,8 +2,10 @@ const warpper = document.querySelector('.wrapper'),
     inputPart = warpper.querySelector('.input-part'),
     infoTxt = inputPart.querySelector('.info-text'),
     inputField = inputPart.querySelector('input'),
-    locationBtn = inputPart.querySelector('button')
+    locationBtn = inputPart.querySelector('button'),
+    arrowBack = warpper.querySelector('.btnBack');
 let tempApi;
+let skyIcone = document.querySelector('img')
 
 
 
@@ -59,14 +61,28 @@ function weatherDetails(info) {
         const { description, id } = info.weather[0]
         const { feels_like, humidity, temp } = info.main
             /////get elements by html var //////
-
         warpper.querySelector('.temp .number').innerHTML = Math.floor(temp);
         warpper.querySelector('.weather').innerHTML = description;
         warpper.querySelector('.location span').innerHTML = `${country} ${city}`;
         warpper.querySelector('.details .temp .number').innerHTML = Math.floor(feels_like);
         warpper.querySelector('.details .temp .number2').innerHTML = humidity;
-
-
+        ////////////// change icon by change sky ///////
+        if (id == 800) {
+            skyIcone.src = 'images/clear.svg';
+        } else if (id >= 200 && id <= 232) {
+            skyIcone.src = 'images/storm.svg';
+        } else if ((id >= 300 && id <= 321) || (id >= 500 && id <= 531)) {
+            skyIcone.src = 'images/rain.svg';
+        } else if (id >= 600 && id <= 622) {
+            skyIcone.src = 'images/snow.svg';
+        } else if (id >= 701 && id <= 781) {
+            skyIcone.src = 'images/haze.svg'
+        } else if (id >= 801 && id <= 804) {
+            skyIcone.src = 'images/cloud.svg'
+        }
     }
     console.log(info)
-}
+};
+arrowBack.addEventListener('click', function() {
+    warpper.classList.remove('active')
+})

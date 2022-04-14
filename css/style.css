@@ -38,6 +38,13 @@
                                         cursor: pointer;
                                         font-size: 20px;
                                         margin-right: 10px;
+                                        color: #43affc;
+                                    }
+                                    
+                                    .btnBack {
+                                        outline: none !important;
+                                        border: none !important;
+                                        background-color: transparent;
                                     }
                                     
                                     .wrapper .input-part {
@@ -198,7 +205,7 @@
                                     
                                     .bottomIcon {
                                         font-size: 30px;
-                                        color: #43AFFC;
+                                        color: #43AFFC !important;
                                         margin-right: 10px;
                                         margin-top: -10px;
                                     }

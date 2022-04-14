@@ -6,7 +6,7 @@ const warpper = document.querySelector('.wrapper'),
     arrowBack = warpper.querySelector('.btnBack');
 let tempApi;
 let skyIcone = document.querySelector('img')
-
+let owlCarouselDisplay = document.querySelector('.owl-carousel')
 
 
 inputField.addEventListener('keyup', e => {
@@ -84,5 +84,26 @@ function weatherDetails(info) {
     console.log(info)
 };
 arrowBack.addEventListener('click', function() {
-    warpper.classList.remove('active')
+        warpper.classList.remove('active')
+    })
+    /////////////////////////////////////////////// Start  D-none nav links function   ////////////////////////////////////////
+$('.js-scroll-trigger').click(function() {
+    $('.navbar-collapse').collapse('hide');
+});
+/////////////////////////////////////////////// End   D-none nav links function    ////////////////////////////////////////
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load('particles-js', './js/particles.json', function() {
+    console.log('callback - particles.js config loaded');
+});
+
+
+////////// Loading page ///////
+$(document).ready(function() {
+    $('.loading').fadeOut(1000, function() {
+        $('.navbar ,footer').fadeIn(1000, function() {
+            $('.wrapper').fadeIn(1000, function() {
+                $('#particles-js').show(9000)
+            })
+        })
+    })
 })

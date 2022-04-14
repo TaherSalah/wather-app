@@ -6,14 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <!-- start Linkes bootstrap css -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <!-- Linking BoxIcon for Icon -->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!-- start Linkes Style css -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body id="particles-js">
+    <!----------------------------Start Navbar section------------------------------------------------>
+    <nav class="navbar navbar-expand-lg navbar-light bg-info fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Weather <span class="text-white"> App</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto  mb-lg-0 text-center  px-2">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link js-scroll-trigger" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link js-scroll-trigger">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-----------------------------------------End Navbar section------------------------------------------------------->
+    <!-----------------------------------------Start wrapper section------------------------------------------------------->
+    <div class="loading">
+        <div class="lds-hourglass"></div>
+    </div>
     <div class='wrapper'>
         <header><button class="btnBack"><i class="fa iconLeft fa-arrow-left"></i></button>Weather App</header>
         <section class="input-part">
@@ -56,16 +83,51 @@
             </div>
         </section>
     </div>
-
-
-
-
-
+    <!-----------------------------------------End wrapper section------------------------------------------------------->
+    <!--------------------------------------------- Start Footer ----------------------------------------------------------->
+    <footer class="  position-absolute  align-content-end">
+        <div class="container text-white text-center ">
+            <div class="row ">
+                <div class="col-md-7 text-center copyRight ">
+                    <p>Copyright <i class="Copyright fa fa-copyright "></i> Marec 2022 All Rights Reseved by
+                        <a href="https://www.linkedin.com/in/taher-salah-1a5622134/" class="myNames"> Taher Salah</a>
+                    </p>
+                </div>
+                <div class="col-md-4 ">
+                    <ul class="list-unstyled ">
+                        <a class="text-decoration-none" href="https://www.facebook.com/taher.salah.7927" target="_blank ">
+                            <li class="socialMe list-inline-item "><i class="fab1 fab fa-facebook "></i></li>
+                        </a>
+                        <a class="text-decoration-none" href="https://www.instagram.com/tahersalahm/" target="_blank ">
+                            <li class="socialMe list-inline-item "><i class="fab2 fab fa-instagram "></i></li>
+                        </a>
+                        <a class="text-decoration-none" href="https://www.linkedin.com/in/taher-salah-1a5622134/" target="_blank ">
+                            <li class="socialMe list-inline-item "><i class="fab3 fab fa-linkedin "></i></li>
+                        </a>
+                        <a class="text-decoration-none" href=" " target="_blank ">
+                            <li class="socialMe list-inline-item "><i class="fab4 fab fa-twitter "></i></li>
+                        </a>
+                        <a class="text-decoration-none" href="https://github.com/TaherSalah" target="_blank ">
+                            <li class="socialMe list-inline-item "><i class="fab5 fab fa-github "></i></li>
+                        </a>
+                        <a class="text-decoration-none" href="# ">
+                            <li class="socialMe list-inline-item "><i class="fab6 fab fa-google "></i></li>
+                        </a>
+                        <a class="text-decoration-none" href="https://api.whatsapp.com/send/?phone=01094529752&text&app_absent=0" target="_blank ">
+                            <li class="socialMe list-inline-item "><i class="fab7 fab fa-whatsapp "></i></li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-------------------------------------------------- End Footer ------------------------------------------------------------>
 
     <!-- start Linkes script for Js -->
-    <script src="js/all.min.js "></script>
-    <script src="js/bootstrap.bundle.min.js "></script>
-    <script src="js/main.js "></script>
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
     <!-- End Linkes script for Js -->
 </body>
 

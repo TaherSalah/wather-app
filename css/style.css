@@ -1,503 +1,369 @@
-                                 /********************************************************* Start gogle fonts links***********************************************************/
-                                 
-                                 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-                                 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
-                                 @import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
-                                 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-                                 /********************************************************* End gogle fonts links***********************************************************/
-                                 
-                                 * {
-                                     margin: 0;
-                                     padding: 0;
-                                     box-sizing: border-box;
-                                     font-family: 'Poppins', sans-serif;
-                                 }
-                                 
-                                 body {
-                                     height: 100vh;
-                                     align-items: center;
-                                     justify-content: center;
-                                     height: 100vh;
-                                     background-image: url(../images/watherBg.jpg);
-                                     background-position: center center;
-                                     background-size: cover;
-                                     background-repeat: no-repeat;
-                                     overflow: hidden !important;
-                                 }
-                                 
-                                 .loading {
-                                     position: fixed;
-                                     inset: 0;
-                                     background-color: rgba(0, 0, 0, 0.6);
-                                     justify-content: center;
-                                     align-items: center;
-                                     display: flex;
-                                 }
-                                 
-                                 .lds-hourglass {
-                                     display: inline-block;
-                                     position: relative;
-                                     width: 80px;
-                                     height: 80px;
-                                 }
-                                 
-                                 .lds-hourglass:after {
-                                     content: " ";
-                                     display: block;
-                                     border-radius: 50%;
-                                     width: 0;
-                                     height: 0;
-                                     margin: 8px;
-                                     box-sizing: border-box;
-                                     border: 32px solid #fff;
-                                     border-color: #fff transparent #fff transparent;
-                                     animation: lds-hourglass 1.2s infinite;
-                                 }
-                                 
-                                 @keyframes lds-hourglass {
-                                     0% {
-                                         transform: rotate(0);
-                                         animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-                                     }
-                                     50% {
-                                         transform: rotate(900deg);
-                                         animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-                                     }
-                                     100% {
-                                         transform: rotate(1800deg);
-                                     }
-                                 }
-                                 /********************************************************* Start nav  Style***********************************************************/
-                                 
-                                 h3 a {
-                                     text-decoration: none;
-                                     color: #fff;
-                                     font-weight: 700;
-                                     font-family: "Montserrat" !important;
-                                 }
-                                 
-                                 .navbar {
-                                     padding: 0;
-                                     background-color: #43affc9b !important;
-                                     display: none;
-                                 }
-                                 
-                                 .navbar-brand img {
-                                     width: 10rem;
-                                 }
-                                 
-                                 .navActive {
-                                     background-color: beige;
-                                     border-radius: 20%;
-                                 }
-                                 
-                                 .navbar-brand {
-                                     color: brown !important;
-                                     font-size: 20px !important;
-                                     font-weight: 500 !important;
-                                     padding-left: 10px !important;
-                                 }
-                                 
-                                 ul li a {
-                                     transition: all 0.5s linear;
-                                     color: #fff !important;
-                                     text-decoration: none;
-                                     font-family: "Montserrat", sans-serif !important;
-                                     font-weight: 600;
-                                     cursor: pointer;
-                                     position: relative;
-                                     padding-bottom: 7px !important;
-                                 }
-                                 
-                                 ul li a:before {
-                                     content: '';
-                                     position: absolute;
-                                     height: 2px;
-                                     width: 0;
-                                     bottom: 0;
-                                     left: 10px;
-                                     background-color: #fff;
-                                     transition: width 0.35s ease-in;
-                                 }
-                                 
-                                 ul li a:hover::before {
-                                     width: 80%;
-                                     background: #fff;
-                                 }
-                                 
-                                 .navbar-brand::before {
-                                     content: '';
-                                     border-left: 3px solid brown;
-                                     border-radius: 10px;
-                                     margin-right: 10px;
-                                 }
-                                 /********************************************************* End nav  Style***********************************************************/
-                                 /************************************************ Start wrapper Style   *******************************/
-                                 
-                                 .wrapper {
-                                     width: 400px;
-                                     background-color: #fff;
-                                     border-radius: 9px;
-                                     position: absolute;
-                                     top: 191px;
-                                     left: 362px;
-                                     display: none;
-                                 }
-                                 
-                                 .wrapper.active {
-                                     position: absolute;
-                                     top: 98px;
-                                     left: 362px;
-                                 }
-                                 
-                                 .wrapper header {
-                                     color: #43affc;
-                                     padding: 16px 15px;
-                                     border-bottom: 1px solid #bfbfbf;
-                                     display: flex;
-                                     align-items: center;
-                                     font-size: 20px;
-                                     font-weight: 700;
-                                     font-family: "Montserrat", sans-serif !important;
-                                 }
-                                 
-                                 .btnBack .iconLeft {
-                                     cursor: pointer;
-                                     font-size: 20px;
-                                     margin-right: 10px;
-                                     color: #43affc;
-                                 }
-                                 
-                                 .btnBack {
-                                     outline: none !important;
-                                     border: none !important;
-                                     background-color: transparent;
-                                 }
-                                 
-                                 .wrapper .input-part {
-                                     margin: 20px 25px 30px;
-                                     display: block;
-                                 }
-                                 
-                                 .input-part :where(input,
-                                 button) {
-                                     width: 100%;
-                                     height: 55px;
-                                     border: none;
-                                     outline: none;
-                                     border-radius: 7px;
-                                 }
-                                 
-                                 button {
-                                     background-color: #43affc;
-                                     color: #fff;
-                                     font-size: 18px;
-                                     font-weight: 500;
-                                 }
-                                 
-                                 .input-part input {
-                                     border: 1px solid #bfbfbf;
-                                     padding-left: 10px;
-                                 }
-                                 
-                                 .input-part .seprator {
-                                     height: 1px;
-                                     width: 100%;
-                                     margin: 20px 0;
-                                     background-color: #ccc;
-                                     display: flex;
-                                     justify-content: center;
-                                     align-items: center;
-                                 }
-                                 
-                                 .wrapper .input-part {
-                                     margin: 20px 25px 30px;
-                                 }
-                                 
-                                 .wrapper .seprator::before {
-                                     content: 'or';
-                                     padding: 0 10px;
-                                     background-color: #fff;
-                                     color: #bfbfbf;
-                                 }
-                                 
-                                 .input-part .info-text {
-                                     border-radius: 7px;
-                                     padding: 10px 13px;
-                                     font-size: 17px;
-                                 }
-                                 
-                                 .info-text.error {
-                                     display: block;
-                                     background: #f8d7da;
-                                     border: 1px solid #f5c6cb;
-                                     color: #721c24;
-                                 }
-                                 
-                                 .info-text.pending {
-                                     display: block;
-                                     background-color: #d1ecf1;
-                                     border: 1px solid #bee5eb;
-                                     color: #0c5460;
-                                 }
-                                 
-                                 .input-part input:is(:focus,
-                                  :valid) {
-                                     border: 2px solid #43AFFC;
-                                 }
-                                 
-                                 .wrapper.active .input-part {
-                                     display: none;
-                                 }
-                                 
-                                 .wrapper.active header {
-                                     font-size: 30px;
-                                     margin-left: 5px;
-                                 }
-                                 /************************************************ Start Wather Part Style   *******************************/
-                                 
-                                 .wrapper .weather-part {
-                                     margin: 30px 0 0;
-                                     display: flex;
-                                     align-items: center;
-                                     justify-content: center;
-                                     flex-direction: column;
-                                 }
-                                 
-                                 .weather-part img {
-                                     max-width: 125px;
-                                 }
-                                 
-                                 .weather-part .temp {
-                                     display: flex;
-                                     font-size: 70px;
-                                     font-weight: 500;
-                                 }
-                                 
-                                 .weather-part .temp .number {
-                                     font-size: 70px;
-                                     font-weight: 600;
-                                 }
-                                 
-                                 .weather-part .temp .degree {
-                                     font-size: 70px;
-                                     font-weight: 600;
-                                     margin-left: 13px;
-                                     display: block;
-                                 }
-                                 
-                                 .weather-part .weather {
-                                     font-size: 21px;
-                                     font-weight: 500;
-                                     text-align: center;
-                                     margin: -5px 20px 15px;
-                                 }
-                                 
-                                 .wrapper.active .weather-part {
-                                     display: flex;
-                                 }
-                                 
-                                 .wrapper .weather-part {
-                                     display: none;
-                                 }
-                                 
-                                 .weather-part .location {
-                                     font-size: 21px;
-                                     margin-bottom: 20px;
-                                     display: flex;
-                                     align-items: center;
-                                 }
-                                 
-                                 .weather-part .location .locicon {
-                                     font-size: 22px;
-                                     margin-right: 7px;
-                                 }
-                                 
-                                 .bottom-details {
-                                     width: 100%;
-                                     display: flex;
-                                     justify-content: space-between;
-                                     align-items: center;
-                                     border-top: 1px solid #bfbfbf;
-                                 }
-                                 
-                                 .bottom-details .column {
-                                     width: 100%;
-                                     display: flex;
-                                     justify-content: center;
-                                     align-items: center;
-                                     padding-top: 15px;
-                                 }
-                                 
-                                 .bottomIcon {
-                                     font-size: 30px;
-                                     color: #43AFFC !important;
-                                     margin-right: 10px;
-                                     margin-top: -10px;
-                                 }
-                                 
-                                 .column.humidity {
-                                     border-left: 1px solid #bfbfbf;
-                                 }
-                                 
-                                 .column.humidity .number2 {
-                                     font-size: 18px;
-                                     font-weight: 500;
-                                 }
-                                 
-                                 .column.feels .number {
-                                     font-size: 18px;
-                                     font-weight: 500;
-                                 }
-                                 
-                                 .column.feels .degree {
-                                     font-size: 18px;
-                                     font-weight: 500;
-                                     margin: 0;
-                                     padding: 0 2px 0 1px;
-                                 }
-                                 
-                                 .details p {
-                                     font-size: 14px;
-                                     margin-top: -4px;
-                                 }
-                                 /************************************************ End Wather Part Style   *******************************/
-                                 /************************************************ Start wrapper Style   *******************************/
-                                 /************************************************ Start Footer Style   *******************************/
-                                 
-                                 footer {
-                                     left: 0;
-                                     bottom: 0;
-                                     right: 0;
-                                     padding-top: 1rem;
-                                     padding-bottom: -1rem;
-                                     background-color: #43affcd4 !important;
-                                     display: none;
-                                 }
-                                 
-                                 .myNames {
-                                     color: #000000;
-                                     text-decoration: none !important;
-                                     transition: all 0.3s ease-in;
-                                     cursor: pointer;
-                                     font-weight: 900;
-                                     font-family: 'Josefin Sans', sans-serif;
-                                 }
-                                 
-                                 .myNames:hover {
-                                     color: #721c24;
-                                 }
-                                 
-                                 .copyRight p {
-                                     color: black !important;
-                                     font-weight: 500;
-                                     font-family: "Montserrat", sans-serif !important;
-                                 }
-                                 
-                                 .socialMe {
-                                     cursor: pointer;
-                                 }
-                                 
-                                 .socialMe .fab1:hover {
-                                     color: #1877f2 !important;
-                                     transform: translateY(-5px);
-                                 }
-                                 
-                                 .socialMe .fab2:hover {
-                                     color: #c32aa3!important;
-                                     transform: translateY(-5px);
-                                 }
-                                 
-                                 .socialMe .fab3:hover {
-                                     color: #0a66c2 !important;
-                                     transform: translateY(-5px);
-                                 }
-                                 
-                                 .socialMe .fab4:hover {
-                                     color: #1da1f2 !important;
-                                     transform: translateY(-5px);
-                                 }
-                                 
-                                 .socialMe .fab5:hover {
-                                     color: #fbff003b !important;
-                                     transform: translateY(-5px);
-                                 }
-                                 
-                                 .socialMe .fab6:hover {
-                                     color: #4285f4 !important;
-                                     transform: translateY(-5px);
-                                 }
-                                 
-                                 .socialMe .fab7:hover {
-                                     color: #25d366!important;
-                                     transform: translateY(-5px);
-                                 }
-                                 
-                                 .socialMe .svg-inline--fa {
-                                     color: black !important;
-                                     font-size: 15px;
-                                     transition: all 0.5s linear;
-                                     margin-left: 5px;
-                                 }
-                                 /********************************************************* End Footer Style Sction****************************************************/
-                                 /********************************************************* Start media  screen****************************************************/
-                                 
-                                 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
-                                     .wrapper {
-                                         width: 80%;
-                                         background-color: #fff;
-                                         border-radius: 9px;
-                                         position: absolute;
-                                         top: 191px;
-                                         left: 10%;
-                                         display: none;
-                                     }
-                                     .wrapper.active {
-                                         position: absolute;
-                                         top: 15%;
-                                         left: 10%;
-                                     }
-                                     .navbar-brand {
-                                         font-size: 30px !important;
-                                     }
-                                 }
-                                 
-                                 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
-                                     /* For landscape layouts only  375x812*/
-                                     .wrapper {
-                                         width: 400px;
-                                         background-color: #fff;
-                                         border-radius: 9px;
-                                         position: absolute;
-                                         top: 25%;
-                                         left: 31%;
-                                         display: none;
-                                     }
-                                     .wrapper.active {
-                                         position: absolute;
-                                         top: 17%;
-                                         left: 31%;
-                                     }
-                                     .navbar-brand {
-                                         font-size: 30px !important;
-                                     }
-                                 }
-                                 
-                                 @media screen and (min-width: 600px) and (max-width: 740px) {
-                                     /*For Tablets*/
-                                     .wrapper {
-                                         width: 400px;
-                                         background-color: #fff;
-                                         border-radius: 9px;
-                                         position: absolute;
-                                         top: 30%;
-                                         left: 20%;
-                                         display: none;
-                                     }
-                                     .wrapper.active {
-                                         position: absolute;
-                                         top: 22%;
-                                         left: 20%;
-                                     }
-                                 }
-                                 /********************************************************* End media  screen****************************************************/
+/********************************************************* Start gogle fonts links***********************************************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+/********************************************************* End gogle fonts links***********************************************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(../images/watherBg.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+}
+/********************************************************* Start loading ***********************************************************/
+
+.loading {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.lds-hourglass {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-hourglass:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-hourglass 1.2s infinite;
+}
+
+@keyframes lds-hourglass {
+    0% {
+        transform: rotate(0);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+
+    50% {
+        transform: rotate(900deg);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    100% {
+        transform: rotate(1800deg);
+    }
+}
+/********************************************************* End loading  ***********************************************************/
+
+/********************************************************* Start nav  Style***********************************************************/
+.navbar {
+    padding: 0;
+    background-color: #333d44 !important;
+    display: none;
+    margin: auto !important;
+}
+
+.navbar-brand img {
+    width: 10rem;
+}
+.navbar-brand {
+    color: brown !important;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    padding-left: 10px !important;
+}
+
+.socialMe .svg-inline--fa {
+    color: rgb(255, 255, 255) !important;
+    font-size: 20px;
+    transition: all 0.5s linear;
+    margin-left: 23px;
+    margin-top: 20px;
+}
+
+.socialMe {
+    cursor: pointer;
+}
+
+.socialMe .fab1:hover {
+    color: #1877f2 !important;
+}
+
+.socialMe .fab3:hover {
+    color: #0a66c2 !important;
+}
+
+.socialMe .fab5:hover {
+    color: #3232243b !important;
+}
+/********************************************************* End nav  Style***********************************************************/
+/********************************************************* Start wrapper Style   ***************************************************/
+.wrapper {
+    width: 400px;
+    background-color: #fff;
+    border-radius: 9px;
+    display: none;
+}
+
+.wrapper header {
+    color: #43affc;
+    padding: 16px 15px;
+    border-bottom: 1px solid #bfbfbf;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif !important;
+}
+
+.btnBack .iconLeft {
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 10px;
+    color: #43affc;
+}
+
+.btnBack {
+    outline: none !important;
+    border: none !important;
+    background-color: transparent;
+}
+
+.wrapper .input-part {
+    margin: 20px 25px 30px;
+    display: block;
+}
+
+.input-part :where(input,
+    button) {
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+}
+
+button {
+    background-color: #43affc;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.input-part input {
+    border: 1px solid #bfbfbf;
+    padding-left: 10px;
+}
+
+.input-part .seprator {
+    height: 1px;
+    width: 100%;
+    margin: 20px 0;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .input-part {
+    margin: 20px 25px 30px;
+}
+
+.wrapper .seprator::before {
+    content: 'or';
+    padding: 0 10px;
+    background-color: #fff;
+    color: #8a8484;
+}
+
+.input-part .info-text {
+    border-radius: 7px;
+    padding: 10px 13px;
+    font-size: 17px;
+}
+
+.info-text.error {
+    display: block;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+.info-text.pending {
+    display: block;
+    background-color: #d1ecf1;
+    border: 1px solid #bee5eb;
+    color: #0c5460;
+}
+
+.input-part input:is(:focus,
+    :valid) {
+    border: 2px solid #43AFFC;
+}
+
+.wrapper.active .input-part {
+    display: none;
+}
+
+.wrapper.active header {
+    font-size: 30px;
+    margin-left: 5px;
+}
+
+/********************************************************* Start Wather Part Style   ***************************************************/
+
+.wrapper .weather-part {
+    margin: 30px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.weather-part img {
+    max-width: 125px;
+}
+
+.weather-part .temp {
+    display: flex;
+    font-size: 70px;
+    font-weight: 500;
+}
+
+.weather-part .temp .number {
+    font-size: 70px;
+    font-weight: 600;
+}
+
+.weather-part .temp .degree {
+    font-size: 70px;
+    font-weight: 600;
+    margin-left: 13px;
+    display: block;
+}
+
+.weather-part .weather {
+    font-size: 21px;
+    font-weight: 500;
+    text-align: center;
+    margin: -5px 20px 15px;
+}
+
+.wrapper.active .weather-part {
+    display: flex;
+}
+
+.wrapper .weather-part {
+    display: none;
+}
+
+.weather-part .location {
+    font-size: 21px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.weather-part .location .locicon {
+    font-size: 22px;
+    margin-right: 7px;
+}
+
+.bottom-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #bfbfbf;
+}
+
+.bottom-details .column {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.bottomIcon {
+    font-size: 30px;
+    color: #43AFFC !important;
+    margin-right: 10px;
+    margin-top: -10px;
+}
+
+.column.humidity {
+    border-left: 1px solid #bfbfbf;
+}
+
+.column.humidity .number2 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.column.feels .number {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.column.feels .degree {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0 2px 0 1px;
+}
+
+.details p {
+    font-size: 14px;
+    margin-top: -4px;
+}
+
+/********************************************************* End Wather Part Style    ***************************************************/
+/********************************************************* End wrapper Style   ***************************************************/
+
+/********************************************************* Start media  screen****************************************************/
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+    .navbar-brand {
+        font-size: 30px !important;
+    }
+
+    .wrapper {
+        width: 80%;
+        border-radius: 9px;
+        display: none;
+    }
+
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+    .navbar-brand {
+        font-size: 40px !important;
+    }
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width:480px) {
+    .wrapper {
+        width: 80%;
+        border-radius: 9px;
+        display: none;
+    }
+
+}
+
+/********************************************************* End media  screen****************************************************/
